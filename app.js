@@ -43,7 +43,11 @@ const dbUrl = process.env.DB_URL || 'mongodb://000000000:27017/yelpcamp';
 //         console.log(err)
 //     });
 
-mongoose.connect(dbUrl);
+mongoose.connect(dbUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    // Omit any SSL-related options here
+});
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
