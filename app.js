@@ -45,7 +45,9 @@ const dbUrl = process.env.DB_URL || 'mongodb://000000000:27017/yelpcamp';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
+    useCreateIndex: true,
     useUnifiedTopology: true,
+    useFindAndModify: false
     // Omit any SSL-related options here
 });
 
