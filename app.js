@@ -27,9 +27,9 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const mongoSanitize = require('express-mongo-sanitize');
 const MongoStore = require('connect-mongo');
-const dbUrl = 'mongodb://127.0.0.1:27017/yelpcamp';
+// const dbUrl = 'mongodb://127.0.0.1:27017/yelpcamp';
 
-// const dbUrl = process.env.DB_URL || 'mongodb://000000000:27017/yelpcamp';
+const dbUrl = process.env.DB_URL || 'mongodb://000000000:27017/yelpcamp';
 // const helmet = require('helmet');
 
 
